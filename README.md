@@ -1,22 +1,32 @@
+
 # agol-autocad-interface
+Accessing layers from AGOL using AutoCAD plugins to avoid double-handling datasets.
 ---
-Working on a tool for implementing Esri based layers (field collector apps) into cad directly.  
-This tool intends to work as a plugin to AutoCAD (full required for this, not LT) to connect to the arcgis online server without having to double handle data.  
-Autocad plugins use C# and will need to be learnt to a higher level to work on this tool.  
----
-## Plans for arc-cad-interface
-<ol>
-<li>Allow connection to Esri account and list of feature layers.</li>
-<li>Loading of feature layers into AutoCAD using C# API</li>
-<li>Using templates to load comment layers as comment boxes</li>
-<li>Creating linked excel sheet for editing comments (current workflow for comment editing for drawings)</li>
-<li>Link to create photo appendix document from final edits?</li>
-<li>Pushing edits up to Esri source layer</li>
-<ol>
+
+## Installation and running the plugin
+The latest release can be found in [Releases](https://github.com/GWP-Consultants/agol-autocad-interface/releases)
+
+Download this .zip file onto your computer and unzip.
+
+Open AutoCAD and run:
+
+        netload
+Then navigate to the directory where the plugin was unzipped and select 
+
+		ArcGISAutoCAD.dll
+The plugin will be initialised and ready to use from the ribbon at the top.
+First use the 'Settings' button to log in to your AGOL account and select the destination CRS you intend to use.
+Next the import button will display available folders to the logged in user and their subsequent layers.
+Multiple can be selected at once to allow for easier loading.
+If a point layer is chosen the user is prompted to choose whether this should be loaded as a default circle or inherit a block reference.
+A number of default block references are also used by the plugin.
+If the block reference has an attribute defined then the plugin will prompt the user to choose an attribute from the AGOL layer to fill this for each item within the layer.
 
 ---
-## Access
-Plugin installation and source code will be made available once ready for use.
+
+## Access as of July 2025  
+The latest release can be found in [Releases](https://github.com/GWP-Consultants/agol-autocad-interface/releases)
+
 ---
 ## Documentation
 
@@ -24,7 +34,10 @@ Documentation will be worked on throughout creation of tool.
 
 ---
 ## Future Work
-n/a
+<li>Enabling the user to load in local files instead of just AGOL layers - In the form of shape files, Geopackage.</li>
+<li>Enabling interface with PostgreSQL/PostGIS databases with querying possibility.</li>
+<li>Enabling use of public datasets within the tool - British lidar dataset, world 30m topo etc.</li>
+
 ---
 ## Contact
 
