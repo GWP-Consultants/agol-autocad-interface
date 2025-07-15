@@ -32,6 +32,21 @@ The latest release can be found in [Releases](https://github.com/GWP-Consultants
 
 Documentation will be worked on throughout creation of tool.  
 
+![Ribbon Menu](/Resources/Ribbon-menu.png "Ribbon menu")
+Once loaded the following tools are available in the ribbon menu.
+
+![Login screen](/Resources/Login-screen.png "Login screen")
+Within settings the user can log in to their AGOL account and select the destination CRS.
+
+![Loading Layers](/Resources/Loading-layers.png "Loading layers")
+Layers can be selected by first choosing a parent folder to select from.
+
+![Add Attribute](/Resources/add-attribute.png "Add attribute")
+If the chosen block has an attribute, the feature layer's own attributes can be selected from to fill in the value of each block.
+
+![Example](/Resources/example-loaded.png "Example")
+Example of the boundary layer with comments.
+
 ---
 ## Future Work
 <li>Enabling the user to load in local files instead of just AGOL layers - In the form of shape files, Geopackage.</li>
